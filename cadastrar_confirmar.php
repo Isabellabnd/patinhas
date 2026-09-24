@@ -47,6 +47,10 @@
             }
             ?>
 
+            <p style="text-align: center;">
+                <a href="index.php" class="btn-voltar">$larr; Voltar</a>
+</p>
+
         </div>
     </div>
 

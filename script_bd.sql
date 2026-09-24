@@ -10,4 +10,4 @@ CREATE TABLE animais (
     porte VARCHAR(50) NOT NULL,
     descricao TEXT NOT NULL,
     data_cadastro TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
+); 
