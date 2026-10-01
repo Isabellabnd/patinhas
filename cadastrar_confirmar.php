@@ -34,11 +34,11 @@
            $porte = $_POST['porte'];
            $descricao = $_POST['descricao'];
           
-           $sql = "INSERT INTO cadastro(nome, especie, idade, porte, descricao) VALUES (?,?,?,?,?)";
+           $sql = "INSERT INTO animais(nome, especie, idade, porte, descricao) VALUES (?,?,?,?,?)";
            $comando = $conexao->prepare($sql);
            $comando->bind_param("ssiss", $nome, $especie, $idade, $porte, $descricao);
 
-           if ($comando-execute())
+           if ($comando->execute())
             {
                 echo "<p>Cadastro efetuado!</p>";
             }

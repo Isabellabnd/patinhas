@@ -38,13 +38,13 @@
 
         <!-- AQUI ESCREVER O CÓDIGO EM PHP QUE BUSCA OS ANIMAIS NO BANCO E DADOS E EXIBE NAS LINHAS E COLUNAS DA TABELA -->
         <?php
-        include 'dp.php';
+        include 'db.php';
 
         $sql = "SELECT * FROM animais ORDER BY nome DESC";
 
         $resultado = $conexao->query($sql);
 
-        while($linha = $resultado->fech_assoc())
+        while($linha = $resultado->fetch_assoc())
             {
                 echo "<tr>";
                 echo "<td>". $linha['nome'] . "</td>";
@@ -54,10 +54,10 @@
                 echo "<td>". $linha['descricao'] . "</td>";
                 echo "</tr>";
             }
-
+    ?>
     </table>
              <p style="text-align: center;">
-                <a href="index.php" class="btn-voltar">$larr; Voltar</a>
+                <a href="index.php" class="btn-voltar">&larr; Voltar</a>
 </p>
 
         </div>
